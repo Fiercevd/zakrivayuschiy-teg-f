@@ -91,17 +91,11 @@
   z-index: 2;
 }
 
-@supports (text-stroke: 1px rgba(255, 255, 255, 0.5)) {
-
-  .card__label {
-    text-stroke: 1px rgba(255, 255, 255, 0.5);
-  }
-} 
-
 @supports (-webkit-text-stroke: 1px rgba(255, 255, 255, 0.5)) or (text-stroke: 1px rgba(255, 255, 255, 0.5)) {
 
   .card__label {
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    text-stroke: 1px rgba(255, 255, 255, 0.5);
     text-shadow: none;
   }
 }
@@ -286,7 +280,6 @@ dialog::backdrop {
 
   dialog[open] {
     padding: 28px 36px;
-    overflow: hidden;
   }
 
   .dialog_content {
